@@ -1,3 +1,15 @@
+# lock in the provider version
+
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "6.0.0-beta1"
+    }
+
+  }
+}
+
 # define aws provider
 
 provider "aws" {
