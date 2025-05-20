@@ -10,6 +10,6 @@ Terraform code to quickly spin up an AWS EC2 VM and set up SSH access with desir
 
 > 1. Obtain Terraform using your desired package manager or download the executable. More info here: https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
 >2. Create an Access Key credential in AWS IAM (I highly encourage you to make this credential have the least needed permissions for setting up and destroying resources, the security of the credential is on you).
->3. Fill out aws_variables.tf file with previously created Access Key credentials, your SSH public key and adjust your region accordingly.
+>3. Fill out aws_variables.tf file with previously created Access Key credentials (or comment out **access key** and **secret key** lines in **aws_provider.tf** if you have used aws-cli before and have configured your default Access Key credentials there), your SSH public key and adjust your region accordingly.
 >4. In the main directory: run **terraform plan**, confirm if all the resources align with what you need, then run **terraform apply**.
 >5. When the resources are no longer needed, in the main directory run **terraform destroy**.
